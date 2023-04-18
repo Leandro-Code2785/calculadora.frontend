@@ -4,7 +4,7 @@ Este es un proyecto simple de una calculadora en HTML5 que realiza operaciones d
 
 Instrucciones de ejecución
 
-- Descargar todos los archivos del proyecto, incluyendo el archivo HTML, el archivo CSS (style.css) y el archivo JavaScript (script.js).
+- Descargar todos los archivos del proyecto, incluyendo el archivo HTML (calculadora.html), el archivo CSS (calculadora.css) y el archivo JavaScript (calculadora.js).
 
 ```
 git clone https://github.com/Leandro-Code2785/calculadora.frontend.git
