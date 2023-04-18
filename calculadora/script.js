@@ -1,28 +1,39 @@
 $(document).ready(function () {
   $("#calcular").click(function (event) {
     event.preventDefault()
-    var valor1 = parseFloat($("#valor1").val())
-    var valor2 = parseFloat($("#valor2").val())
-    var operacion = $("#operacion").val()
-    var resultado = 0
-    if (operacion == "suma") {
-      resultado = valor1 + valor2
-    } else if (operacion == "resta") {
-      resultado = valor1 - valor2
-    } else if (operacion == "multiplicacion") {
-      resultado = valor1 * valor2
-    } else if (operacion == "division") {
-      resultado = valor1 / valor2
+    const value1 = parseFloat($("#valor1").val())
+    const value2 = parseFloat($("#valor2").val())
+
+    try {
+      Number(value1)
+      Number(value2)
+    } catch (err) {
+      alert("Debes introducir números")
+      return
     }
-    $("#resultado").text("El resultado es: " + resultado)
+
+    const operacion = $("#operacion").val()
+    let result = 0
+    if (operacion == "suma") {
+      result = value1 + value2
+    } else if (operacion == "resta") {
+      result = value1 - value2
+    } else if (operacion == "multiplicacion") {
+      result = value1 * value2
+    } else if (operacion == "division") {
+      result = value1 / value2
+    }
+    $("#resultado").text("El resultado es: " + result)
   })
 })
 
 const cleanUpBtn = document.getElementById("cleanUp")
 
 cleanUpBtn.addEventListener("click", function () {
-  const input = document.getElementById("valor1")
-  const input2 = document.getElementById("valor2")
-  input.value = ""
-  input2.value = ""
+  const value1 = document.getElementById("valor1")
+  const value2 = document.getElementById("valor2")
+  const result = document.getElementById("resultado")
+  value1.value = ""
+  value2.value = ""
+  result.innerHTML = ""
 })
