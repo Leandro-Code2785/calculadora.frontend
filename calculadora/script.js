@@ -1,3 +1,9 @@
+let isRound = false
+let isFixed = false
+
+const elementIsRound = document.getElementById("isRound")
+const elementIsFixed = document.getElementById("isFixed")
+
 $(document).ready(function () {
   $("#calcular").click(function (event) {
     event.preventDefault()
@@ -23,6 +29,15 @@ $(document).ready(function () {
     } else if (operacion == "division") {
       result = value1 / value2
     }
+
+    if (isRound) {
+      result = Math.round(result)
+    }
+
+    if (isFixed) {
+      result = result.toFixed(2)
+    }
+
     $("#resultado").text("El resultado es: " + result)
   })
 })
@@ -36,4 +51,12 @@ cleanUpBtn.addEventListener("click", function () {
   value1.value = ""
   value2.value = ""
   result.innerHTML = ""
+})
+
+elementIsRound.addEventListener("click", function () {
+  isRound = !isRound
+})
+
+elementIsFixed.addEventListener("click", function () {
+  isFixed = !isFixed
 })

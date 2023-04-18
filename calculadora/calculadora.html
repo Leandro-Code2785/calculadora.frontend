@@ -15,10 +15,10 @@
         <h1>Calculadora</h1>
         <form>
           <div class="form-group">
-            <input type="text" class="form-control" id="valor1" placeholder="Ingrese el primer valor">
+            <input type="number" class="form-control" id="valor1" placeholder="Ingrese el primer valor">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="valor2" placeholder="Ingrese el segundo valor">
+            <input type="number" class="form-control" id="valor2" placeholder="Ingrese el segundo valor">
           </div>
           <div class="form-group">
             <label for="operacion">Operación:</label>
@@ -28,6 +28,14 @@
               <option value="multiplicacion">Multiplicación</option>
               <option value="division">División</option>
             </select>
+          </div>
+          <!-- create checkbox for if the user want to round the result -->
+          <div>
+            <label for="round">Quiere el resultado redondeado?</label>
+            <input type="checkbox" id="isRound" name="round">
+            <br>
+            <label for="round">Quiere el resultado truncado a 2 decimales?</label>
+            <input type="checkbox" id="isFixed" name="fixed">
           </div>
           <button type="submit" class="btn btn-primary" id="calcular">Calcular</button>
           <button type="button" class="btn btn-primary" id="cleanUp">Limpiar inputs</button>
