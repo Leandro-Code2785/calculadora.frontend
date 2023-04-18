@@ -11,13 +11,15 @@ git clone https://github.com/Leandro-Code2785/calculadora.frontend.git
 cd calculadora
 ```
 
+- El proyecto no requiere ninguna configuración adicional, ya que utiliza enlaces a archivos de Bootstrap y jQuery alojados en servidores externos.
+
 - Abrir el archivo HTML (index.html) en un navegador web compatible.
 - Ingresar los valores numéricos en los campos de entrada de la calculadora.
 - Seleccionar la operación deseada en el menú desplegable de operaciones.
 - Hacer clic en el botón "Calcular" para obtener el resultado de la operación seleccionada.
 - Se puede hacer clic en el botón "Limpiar inputs" para borrar los valores ingresados en los campos de entrada y el resultado mostrado.
-- Configuración del proyecto
-- El proyecto no requiere ninguna configuración adicional, ya que utiliza enlaces a archivos de Bootstrap y jQuery alojados en servidores externos.
+- Se puede hacer click a un checkbox para truncar el resultado a dos decimales.
+- Se puede hacer click a un checkbox para mostrar el resultado redondeado.
 
 ## Documentación adicional
 
